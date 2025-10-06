@@ -48,8 +48,9 @@ export function MainSidebar() {
       <SidebarMenu>
         {navItems.map((item) => (
           <SidebarMenuItem key={item.href}>
-            <Link href={item.href} passHref legacyBehavior>
+            <Link href={item.href} passHref>
               <SidebarMenuButton
+                as="a"
                 isActive={pathname === item.href}
                 tooltip={item.label}
               >
@@ -118,4 +119,3 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   }
 )
 Button.displayName = "Button"
-
